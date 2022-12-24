@@ -2,8 +2,6 @@ package main
 
 import (
 	"errors"
-
-	types "github.com/YoungGoofy/sudoku/types"
 )
 
 var BoundsError = errors.New("out of bounds")
@@ -26,6 +24,26 @@ func ValueDigit(digit int8) bool {
 	return true
 }
 
-func RepeatDigits(field types.Field) {
+// TODO:
+// надо пройтись по "у" циклом, "х" остается неизменным
+func CheckRows(field Field, row, column int, digit int8) bool {
+	return true
+}
 
+// TODO:
+// надо пройтись по "х" циклом, "у" остается неизменным
+// надо добавить числа во временный массив и сверить
+// данные с digit, если есть повтор, то false, иначе true
+func CheckColumns(field Field, row, column int, digit int8) bool {
+	return true
+}
+
+func CheckGrid(field Field, row, column int, digit int8) bool {
+	return true
+}
+
+// TODO:
+// реализовать проверку, есть ли такой же элемент в массиве
+func findDubles(arr [Rows]int8, row, column int, digit int8) bool {
+	return true
 }
